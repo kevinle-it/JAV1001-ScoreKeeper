@@ -129,16 +129,19 @@
                 android:layout_gravity="center_horizontal">
 
                 <RadioButton
+                    android:id="@+id/team1Score1RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1 Score" />
 
                 <RadioButton
+                    android:id="@+id/team1Score50RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="50 Score" />
 
                 <RadioButton
+                    android:id="@+id/team1Score99RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="99 Score" />
@@ -153,16 +156,19 @@
                 android:layout_gravity="center_horizontal">
 
                 <RadioButton
+                    android:id="@+id/team2Score1RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1 Score" />
 
                 <RadioButton
+                    android:id="@+id/team2Score50RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="50 Score" />
 
                 <RadioButton
+                    android:id="@+id/team2Score99RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="99 Score" />
