@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup team1ScoreRadioGroup;
     RadioGroup team2ScoreRadioGroup;
 
-    int team1Score = 0;
-    int team2Score = 0;
-    int team1ScoreChangeBy = 1;
-    int team2ScoreChangeBy = 1;
+    int team1Score = 0; // team 1 score to show on UI
+    int team2Score = 0; // team 2 score to show on UI
+    int team1ScoreChangeBy = 1; // change by value for team 1 score
+    int team2ScoreChangeBy = 1; // change by value for team 2 score
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // --------------------------------------------------
         // Set all listeners for xml elements
         // --------------------------------------------------
+        // Increase and Decrease buttons for team 1 and 2 scores
         btnIncreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,9 +78,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Radio Groups for Team 1 change by score
         team1ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                // Set the change by value for team 1 score when user select a radio button
                 switch (checkedId) {
                     case R.id.team1Score1RadioBtn:
                         team1ScoreChangeBy = 1;
@@ -93,9 +96,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // Radio Groups for Team 2 change by score
         team2ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                // Set the change by value for team 2 score when user select a radio button
                 switch (checkedId) {
                     case R.id.team2Score1RadioBtn:
                         team2ScoreChangeBy = 1;
