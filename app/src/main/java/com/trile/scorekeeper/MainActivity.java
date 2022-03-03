@@ -3,14 +3,15 @@ package com.trile.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView team1Score;
-    TextView team2Score;
+    TextView team1ScoreText;
+    TextView team2ScoreText;
 
     Button btnIncreaseTeam1Score;
     Button btnIncreaseTeam2Score;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup team1ScoreRadioGroup;
     RadioGroup team2ScoreRadioGroup;
 
+    int team1Score = 0;
+    int team2Score = 0;
     int team1ScoreChangeBy = 1;
     int team2ScoreChangeBy = 1;
 
@@ -31,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         // --------------------------------------------------
         // Set all references for xml elements
         // --------------------------------------------------
-        team1Score = findViewById(R.id.team1Score);
-        team2Score = findViewById(R.id.team2Score);
+        team1ScoreText = findViewById(R.id.team1Score);
+        team2ScoreText = findViewById(R.id.team2Score);
 
         btnIncreaseTeam1Score = findViewById(R.id.increaseTeam1Score);
         btnIncreaseTeam2Score = findViewById(R.id.increaseTeam2Score);
@@ -45,6 +48,35 @@ public class MainActivity extends AppCompatActivity {
         // --------------------------------------------------
         // Set all listeners for xml elements
         // --------------------------------------------------
+        btnIncreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                team1Score += team1ScoreChangeBy;
+                team1ScoreText.setText("Score 1: " + team1Score);
+            }
+        });
+        btnIncreaseTeam2Score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                team2Score += team2ScoreChangeBy;
+                team2ScoreText.setText("Score 2: " + team2Score);
+            }
+        });
+        btnDecreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                team1Score -= team1ScoreChangeBy;
+                team1ScoreText.setText("Score 1: " + team1Score);
+            }
+        });
+        btnDecreaseTeam2Score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                team2Score -= team2ScoreChangeBy;
+                team2ScoreText.setText("Score 2: " + team2Score);
+            }
+        });
+
         team1ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
