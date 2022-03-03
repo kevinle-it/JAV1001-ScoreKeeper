@@ -139,13 +139,13 @@
                     android:id="@+id/team1Score50RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="50 Score" />
+                    android:text="50 Scores" />
 
                 <RadioButton
                     android:id="@+id/team1Score99RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="99 Score" />
+                    android:text="99 Scores" />
             </RadioGroup>
             <!-- END Team 1 Score Selection section -->
 
@@ -167,13 +167,13 @@
                     android:id="@+id/team2Score50RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="50 Score" />
+                    android:text="50 Scores" />
 
                 <RadioButton
                     android:id="@+id/team2Score99RadioBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="99 Score" />
+                    android:text="99 Scores" />
             </RadioGroup>
             <!-- END Team 2 Score Selection section -->
         </TableRow>
