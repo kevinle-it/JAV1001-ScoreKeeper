@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup team1ScoreRadioGroup;
     RadioGroup team2ScoreRadioGroup;
 
+    int team1ScoreChangeBy = 1;
+    int team2ScoreChangeBy = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +41,41 @@ public class MainActivity extends AppCompatActivity {
 
         team1ScoreRadioGroup = findViewById(R.id.team1ScoreRadioGroup);
         team2ScoreRadioGroup = findViewById(R.id.team2ScoreRadioGroup);
+
+        // --------------------------------------------------
+        // Set all listeners for xml elements
+        // --------------------------------------------------
+        team1ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                switch (checkedId) {
+                    case R.id.team1Score1RadioBtn:
+                        team1ScoreChangeBy = 1;
+                        break;
+                    case R.id.team1Score50RadioBtn:
+                        team1ScoreChangeBy = 50;
+                        break;
+                    case R.id.team1Score99RadioBtn:
+                        team1ScoreChangeBy = 99;
+                        break;
+                }
+            }
+        });
+        team2ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                switch (checkedId) {
+                    case R.id.team2Score1RadioBtn:
+                        team2ScoreChangeBy = 1;
+                        break;
+                    case R.id.team2Score50RadioBtn:
+                        team2ScoreChangeBy = 50;
+                        break;
+                    case R.id.team2Score99RadioBtn:
+                        team2ScoreChangeBy = 99;
+                        break;
+                }
+            }
+        });
     }
 }
