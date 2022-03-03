@@ -126,7 +126,8 @@
                 android:id="@+id/team1ScoreRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:checkedButton="@+id/team1Score1RadioBtn">
 
                 <RadioButton
                     android:id="@+id/team1Score1RadioBtn"
@@ -153,7 +154,8 @@
                 android:id="@+id/team2ScoreRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:checkedButton="@+id/team2Score1RadioBtn">
 
                 <RadioButton
                     android:id="@+id/team2Score1RadioBtn"
