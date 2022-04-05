@@ -3,7 +3,6 @@ package com.trile.scorekeeper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -54,71 +53,53 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupButtonListeners() {
         // Increase and Decrease buttons for team 1 and 2 scores
-        btnIncreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                team1Score += team1ScoreChangeBy;
-                team1ScoreText.setText("Score 1: " + team1Score);
-            }
+        btnIncreaseTeam1Score.setOnClickListener(view -> {
+            team1Score += team1ScoreChangeBy;
+            team1ScoreText.setText("Score 1: " + team1Score);
         });
-        btnIncreaseTeam2Score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                team2Score += team2ScoreChangeBy;
-                team2ScoreText.setText("Score 2: " + team2Score);
-            }
+        btnIncreaseTeam2Score.setOnClickListener(view -> {
+            team2Score += team2ScoreChangeBy;
+            team2ScoreText.setText("Score 2: " + team2Score);
         });
-        btnDecreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                team1Score -= team1ScoreChangeBy;
-                team1ScoreText.setText("Score 1: " + team1Score);
-            }
+        btnDecreaseTeam1Score.setOnClickListener(view -> {
+            team1Score -= team1ScoreChangeBy;
+            team1ScoreText.setText("Score 1: " + team1Score);
         });
-        btnDecreaseTeam2Score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                team2Score -= team2ScoreChangeBy;
-                team2ScoreText.setText("Score 2: " + team2Score);
-            }
+        btnDecreaseTeam2Score.setOnClickListener(view -> {
+            team2Score -= team2ScoreChangeBy;
+            team2ScoreText.setText("Score 2: " + team2Score);
         });
     }
 
     private void setupRadioButtonListeners() {
         // Radio Groups for Team 1 change by score
-        team1ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                // Set the change by value for team 1 score when user select a radio button
-                switch (checkedId) {
-                    case R.id.team1Score1RadioBtn:
-                        team1ScoreChangeBy = 1;
-                        break;
-                    case R.id.team1Score50RadioBtn:
-                        team1ScoreChangeBy = 50;
-                        break;
-                    case R.id.team1Score99RadioBtn:
-                        team1ScoreChangeBy = 99;
-                        break;
-                }
+        team1ScoreRadioGroup.setOnCheckedChangeListener((radioGroup, checkedId) -> {
+            // Set the change by value for team 1 score when user select a radio button
+            switch (checkedId) {
+                case R.id.team1Score1RadioBtn:
+                    team1ScoreChangeBy = 1;
+                    break;
+                case R.id.team1Score50RadioBtn:
+                    team1ScoreChangeBy = 50;
+                    break;
+                case R.id.team1Score99RadioBtn:
+                    team1ScoreChangeBy = 99;
+                    break;
             }
         });
         // Radio Groups for Team 2 change by score
-        team2ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                // Set the change by value for team 2 score when user select a radio button
-                switch (checkedId) {
-                    case R.id.team2Score1RadioBtn:
-                        team2ScoreChangeBy = 1;
-                        break;
-                    case R.id.team2Score50RadioBtn:
-                        team2ScoreChangeBy = 50;
-                        break;
-                    case R.id.team2Score99RadioBtn:
-                        team2ScoreChangeBy = 99;
-                        break;
-                }
+        team2ScoreRadioGroup.setOnCheckedChangeListener((radioGroup, checkedId) -> {
+            // Set the change by value for team 2 score when user select a radio button
+            switch (checkedId) {
+                case R.id.team2Score1RadioBtn:
+                    team2ScoreChangeBy = 1;
+                    break;
+                case R.id.team2Score50RadioBtn:
+                    team2ScoreChangeBy = 50;
+                    break;
+                case R.id.team2Score99RadioBtn:
+                    team2ScoreChangeBy = 99;
+                    break;
             }
         });
     }
