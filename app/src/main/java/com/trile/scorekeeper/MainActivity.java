@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     int team1ScoreChangeBy = 1; // change by value for team 1 score
     int team2ScoreChangeBy = 1; // change by value for team 2 score
 
+    Switch switchNightMode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         team1ScoreRadioGroup = findViewById(R.id.team1ScoreRadioGroup);
         team2ScoreRadioGroup = findViewById(R.id.team2ScoreRadioGroup);
+
+        switchNightMode = findViewById(R.id.switchNightMode);
 
         // --------------------------------------------------
         // Set all listeners for xml elements
