@@ -48,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
         // --------------------------------------------------
         // Set all listeners for xml elements
         // --------------------------------------------------
+        setupButtonListeners();
+        setupRadioButtonListeners();
+    }
+
+    private void setupButtonListeners() {
         // Increase and Decrease buttons for team 1 and 2 scores
         btnIncreaseTeam1Score.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 team2ScoreText.setText("Score 2: " + team2Score);
             }
         });
+    }
 
+    private void setupRadioButtonListeners() {
         // Radio Groups for Team 1 change by score
         team1ScoreRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
