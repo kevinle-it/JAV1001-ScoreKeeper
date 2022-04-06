@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="toolbarStyle">@style/Theme.ScoreKeeper.Toolbar</item>
         <item name="materialButtonStyle">@style/Theme.ScoreKeeper.Button</item>
+        <item name="radioButtonStyle">@style/Theme.ScoreKeeper.RadioButton</item>
     </style>
 
     <style name="Theme.ScoreKeeper.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
@@ -37,5 +38,10 @@
         <item name="android:backgroundTint">@color/amber_a400</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/pink_500</item>
+    </style>
+
+    <style name="Theme.ScoreKeeper.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:buttonTint">@color/pink_200</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

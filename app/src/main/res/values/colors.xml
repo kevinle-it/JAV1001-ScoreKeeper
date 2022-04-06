@@ -22,4 +22,9 @@
     <!-- Button - Night mode -->
     <color name="amber_a400">#FFFFC400</color>
     <color name="pink_500">#FFE91E63</color>
+
+    <!-- RadioButton - Day mode -->
+    <color name="brown_900">#FF3E2723</color>
+    <!-- RadioButton - Night mode -->
+    <color name="pink_200">#FFF48FB1</color>
 </resources>
