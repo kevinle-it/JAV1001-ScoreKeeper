@@ -27,4 +27,8 @@
     <color name="brown_900">#FF3E2723</color>
     <!-- RadioButton - Night mode -->
     <color name="pink_200">#FFF48FB1</color>
+
+    <!-- Switch Control Text - Day & Night mode -->
+    <color name="orange_500">#FF00E5FF</color>
+    <color name="deep_orange_a400">#FFFF3D00</color>
 </resources>

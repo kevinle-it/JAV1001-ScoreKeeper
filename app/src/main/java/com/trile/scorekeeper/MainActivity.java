@@ -2,12 +2,12 @@ package com.trile.scorekeeper;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     int team1ScoreChangeBy = 1; // change by value for team 1 score
     int team2ScoreChangeBy = 1; // change by value for team 2 score
 
-    Switch switchNightMode;
+    SwitchCompat switchNightMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -44,4 +44,12 @@
         <item name="android:buttonTint">@color/pink_200</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="Theme.ScoreKeeper.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="switchMinWidth">55dp</item>
+        <item name="switchPadding">20dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/orange_500</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>

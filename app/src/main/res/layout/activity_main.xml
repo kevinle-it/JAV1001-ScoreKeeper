@@ -26,6 +26,7 @@
                 style="@style/Theme.ScoreKeeper.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:text="Team 1" />
@@ -35,6 +36,7 @@
                 style="@style/Theme.ScoreKeeper.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:text="Team 2" />
@@ -55,6 +57,7 @@
                 style="@style/Theme.ScoreKeeper.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:text="Score 1: 0" />
@@ -64,6 +67,7 @@
                 style="@style/Theme.ScoreKeeper.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:text="Score 2: 0" />
@@ -83,6 +87,7 @@
                 android:id="@+id/increaseTeam1Score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginRight="10dp"
                 android:text="Increase 1" />
 
@@ -90,6 +95,7 @@
                 android:id="@+id/increaseTeam2Score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginLeft="10dp"
                 android:text="Increase 2" />
         </TableRow>
@@ -108,6 +114,7 @@
                 android:id="@+id/decreaseTeam1Score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginRight="10dp"
                 android:text="Decrease 1" />
 
@@ -115,6 +122,7 @@
                 android:id="@+id/decreaseTeam2Score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_span="1"
                 android:layout_marginLeft="10dp"
                 android:text="Decrease 2" />
         </TableRow>
@@ -130,6 +138,7 @@
                 android:id="@+id/team1ScoreRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_span="1"
                 android:layout_gravity="center_horizontal"
                 android:checkedButton="@+id/team1Score1RadioBtn">
 
@@ -158,6 +167,7 @@
                 android:id="@+id/team2ScoreRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_span="1"
                 android:layout_gravity="center_horizontal"
                 android:checkedButton="@+id/team2Score1RadioBtn">
 
@@ -188,11 +198,20 @@
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal">
 
-            <Switch
-                android:id="@+id/switchNightMode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Night Mode" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:gravity="center_horizontal">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNightMode"
+                    style="@style/Theme.ScoreKeeper.Switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Night Mode" />
+
+            </LinearLayout>
 
         </TableRow>
     </TableLayout>
