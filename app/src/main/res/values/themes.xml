@@ -12,33 +12,40 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Apply Button Style on Application level. -->
         <item name="materialButtonStyle">@style/Theme.ScoreKeeper.Button</item>
+        <!-- Apply Radio Button Style on Application level. -->
         <item name="radioButtonStyle">@style/Theme.ScoreKeeper.RadioButton</item>
     </style>
 
+    <!-- Style for Team Names Text View. Apply to individual Views. -->
     <style name="Theme.ScoreKeeper.Title">
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/purple_a400</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <!-- Style for Team Scores Text View. Apply to individual Views. -->
     <style name="Theme.ScoreKeeper.Subtitle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/grey_700</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <!-- Style for Increase & Decrease Buttons for both Teams. -->
     <style name="Theme.ScoreKeeper.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/teal_500</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/yellow_a700</item>
     </style>
 
+    <!-- Style for Radio Buttons as change by factor for both Teams. -->
     <style name="Theme.ScoreKeeper.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/brown_900</item>
     </style>
 
+    <!-- Style for Switch Button to switch between Day & Night mode. Apply to an individual View. -->
     <style name="Theme.ScoreKeeper.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="switchMinWidth">55dp</item>
         <item name="switchPadding">20dp</item>
