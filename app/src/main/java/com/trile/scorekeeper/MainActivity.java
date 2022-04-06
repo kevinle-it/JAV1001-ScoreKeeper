@@ -1,7 +1,9 @@
 package com.trile.scorekeeper;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -31,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (((ScoreKeeperApplication) getApplication()).isNightModeEnabled() == true) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
         setContentView(R.layout.activity_main);
 
         // --------------------------------------------------
@@ -48,12 +55,16 @@ public class MainActivity extends AppCompatActivity {
         team2ScoreRadioGroup = findViewById(R.id.team2ScoreRadioGroup);
 
         switchNightMode = findViewById(R.id.switchNightMode);
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            switchNightMode.setChecked(true);
+        }
 
         // --------------------------------------------------
         // Set all listeners for xml elements
         // --------------------------------------------------
         setupButtonListeners();
         setupRadioButtonListeners();
+        setupSwitchNightModeListener();
     }
 
     private void setupButtonListeners() {
@@ -105,6 +116,26 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.team2Score99RadioBtn:
                     team2ScoreChangeBy = 99;
                     break;
+            }
+        });
+    }
+
+    private void setupSwitchNightModeListener() {
+        switchNightMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                ((ScoreKeeperApplication) getApplication()).setIsNightModeEnabled(true);
+                Intent intent = getIntent();
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                finish();
+                startActivityForResult(intent, 0);
+                overridePendingTransition(0,0);
+            } else {
+                ((ScoreKeeperApplication) getApplication()).setIsNightModeEnabled(false);
+                Intent intent = getIntent();
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                finish();
+                startActivityForResult(intent, 0);
+                overridePendingTransition(0,0);
             }
         });
     }
