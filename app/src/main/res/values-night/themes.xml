@@ -13,6 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="toolbarStyle">@style/Theme.ScoreKeeper.Toolbar</item>
+        <item name="materialButtonStyle">@style/Theme.ScoreKeeper.Button</item>
     </style>
 
     <style name="Theme.ScoreKeeper.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
@@ -30,5 +31,11 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/grey_300</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Theme.ScoreKeeper.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/amber_a400</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/pink_500</item>
     </style>
 </resources>

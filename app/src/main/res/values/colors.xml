@@ -15,4 +15,11 @@
     <!-- Subtitle - Day & Night mode -->
     <color name="grey_700">#FF616161</color>
     <color name="grey_300">#FFE0E0E0</color>
+
+    <!-- Button - Day mode -->
+    <color name="teal_500">#FF009688</color>
+    <color name="yellow_a700">#FFFFD600</color>
+    <!-- Button - Night mode -->
+    <color name="amber_a400">#FFFFC400</color>
+    <color name="pink_500">#FFE91E63</color>
 </resources>
