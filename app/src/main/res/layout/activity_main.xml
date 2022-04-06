@@ -23,6 +23,7 @@
 
             <TextView
                 android:id="@+id/team1Name"
+                style="@style/Theme.ScoreKeeper.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -31,6 +32,7 @@
 
             <TextView
                 android:id="@+id/team2Name"
+                style="@style/Theme.ScoreKeeper.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -50,6 +52,7 @@
 
             <TextView
                 android:id="@+id/team1Score"
+                style="@style/Theme.ScoreKeeper.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -58,6 +61,7 @@
 
             <TextView
                 android:id="@+id/team2Score"
+                style="@style/Theme.ScoreKeeper.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

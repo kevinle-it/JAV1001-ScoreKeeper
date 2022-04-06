@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Title - Day & Night mode -->
+    <color name="purple_a400">#FFd500F9</color>
+    <color name="light_green_a400">#FF76FF03</color>
+
+    <!-- Subtitle - Day & Night mode -->
+    <color name="grey_700">#FF616161</color>
+    <color name="grey_300">#FFE0E0E0</color>
 </resources>

@@ -19,4 +19,16 @@
         <item name="background">@color/purple_200</item>
         <item name="titleTextColor">@color/black</item>
     </style>
+
+    <style name="Theme.ScoreKeeper.Title">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/light_green_a400</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Theme.ScoreKeeper.Subtitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey_300</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>
